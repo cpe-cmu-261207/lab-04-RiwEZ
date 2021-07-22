@@ -7,13 +7,133 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src='script.js' defer></script>
 	<title>Lab 04</title>
-	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
 </head>
 
 <body>
 	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
+	<div class="center">
+		<input type='text' id="todoVal" class="">
+		<button onclick="addTodo()" class="add">Add</button>
+	</div>
+	<div>
+		<ul id="todoList"></ul>
+		<ul id="doneList"></ul>
+	</div>
 </body>
+
+
+<style>
+	* {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+	
+	input:focus {
+		outline: 2px solid #6B7280;
+		border-radius: 0.2rem;
+	}
+
+	body {
+		background-color: #111827;
+	}
+
+	h1 {
+		margin-top: 2rem;
+		color: #F9FAFB;
+		text-align: center;
+		font-size: xx-large;
+	}
+
+	ul {
+		margin: 0;
+		padding-left: 30%;
+		padding-right: 30%;
+	}
+
+	li {
+		display: flex;
+		justify-content: space-between;
+		font-size: large;
+		border-bottom: 1px solid gray;
+		padding: 0.75rem;
+		margin-bottom: 0.5rem;
+		color: #F9FAFB;
+	}
+	
+	button {
+		font-size: medium;
+	}
+
+	#todoList {
+		margin-top: 2rem;
+	}
+
+	#todoVal {
+		width: 30%;
+		margin-right: 0.5rem;
+	}
+
+	.gray-text {
+		color: #9CA3AF;
+	}
+
+	.notShow {
+		visibility: hidden;
+	}
+
+	.show {
+		visibility: visible;
+	}
+
+	.center {
+		margin-top: 2rem;
+		display: flex;
+		justify-content: center;
+	}
+
+	.add {
+		padding: 0.3rem;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		border: none;
+		border-radius: 0.2rem;
+		color: #F9FAFB;
+		background-color: #3B82F6;
+	}
+
+	.add:hover {
+		background-color: #1D4ED8;
+	}
+
+	.done {
+		padding: 0.3rem;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		border: none;
+		border-radius: 0.2rem;
+		color: #F9FAFB;
+		background-color: #34D399;
+	}
+
+	.done:hover {
+		background-color: #047857;
+	}
+
+	.del {
+		padding: 0.3rem;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		border: none;
+		border-radius: 0.2rem;
+		margin-left: 1rem;
+		margin-right: 0.5rem;
+		color: #F9FAFB;
+		background-color: #F87171;
+	}
+	
+	.del:hover {
+		background-color: #B91C1C;
+	}
+
+</style>
 
 </html>
