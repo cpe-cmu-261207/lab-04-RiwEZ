@@ -122,7 +122,8 @@ const render = () => {
 
 
 const addTodo = () => {
-    const todoVal = document.querySelector("#todoVal").value
+    const inField = document.querySelector("#todoVal")
+    const todoVal = inField.value
 
     if (todoVal == "") {
         alert("Task can't be empty!!")
@@ -136,6 +137,7 @@ const addTodo = () => {
     data.task.unshift(todoVal)
     localStorage.setItem("data", JSON.stringify(data))
 
+    inField.value = ""
 } 
 
 
